@@ -15,26 +15,20 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class Main {
-
-
     public static void main(String[] args) {
-//        assertConditionA();
-//        assertConditionB();
-//        //  System.out.println(sum(2_147_483_647, 2));
-//        //   happyNY();
-//        expectedValue();
-//        checkingShoppingCart();
-//        String[] colors = {"aqua", "yellow", "blue",
-//                "green", "orange", "violet", "gold"};
-//        testingJavaCollectionsAssertJ(colors);
-//        List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
-//        Hero emmett = new Hero("Emmett", 50, "sword", heroBag, true);
-//        checkingHero(emmett);
+        // Проверьте, как работают методы:
+        assertConditionA();
+        assertConditionB();
+        System.out.println(sum(2_147_483_647, 1));
+        happyNY();
+        expectedValue();
+        checkingShoppingCart();
+        String[] colors = {"aqua", "yellow", "blue",
+                "green", "orange", "violet", "gold"};
+        testingJavaCollectionsAssertJ(colors);
+        checkingHero();
         double discount = Calculator.calculatingDiscount(100.0, 10);
         System.out.println(discount);
-
-
-
     }
 
     /**
@@ -127,14 +121,14 @@ public class Main {
      */
     public static void testingJavaCollectionsAssertJ(String[] colors) {
         assertThat(colors)
-                .isNotEmpty()
-                .hasSize(7)
-                .doesNotHaveDuplicates()
-                .contains("orange", "green", "violet")
-                .endsWith("gold")
-                .startsWith("aqua")
-                .containsSequence("yellow", "blue") //должны быть рядом
-                .doesNotContain("red", "black");
+                .isNotEmpty()             // Массив не должен быть пустым
+                .hasSize(7)      // Размер массива должен быть равен 7
+                .doesNotHaveDuplicates() // Массив не должен содержать повторяющихся элементов
+                .contains("orange", "green", "violet") // Массив должен содержать цвета: "orange", "green", "violet"
+                .endsWith("gold")   //  Последним цветом в массиве должен быть "gold"
+                .startsWith("aqua")     // Первым цветом в массиве должен быть "aqua"
+                .containsSequence("yellow", "blue")      // В массиве должна быть последовательность цветов "yellow", "blue"
+                .doesNotContain("red", "black"); //Массив не должен содержать цвета: "red", "black"
     }
 
     /**
@@ -145,7 +139,9 @@ public class Main {
      * 4. Проверить содержимое инвентаря героя (размер 3, содержимое "Bow", "Axe", "Gold", порядок не важен)<p>
      * 5. Проверить, что герой это человек (свойство isHuman)<p>
      */
-    public static void checkingHero(Hero emmett) {
+    public static void checkingHero() {
+        List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
+        Hero emmett = new Hero("Emmett", 50, "sword", heroBag, true);
         assertThat(emmett.getName()).isEqualTo("Emmett").hasSize(6);
         assertThat(emmett.getArmorStrength()).isEqualTo(50);
         assertEquals(emmett.getArmorStrength(), 50);
@@ -155,5 +151,61 @@ public class Main {
         assertTrue(emmett.isHuman());
     }
 
+    // 1.8 (Черный ящик)
+    static class Hero {
+        private String name;
+        private int armorStrength;
+        private String weapon;
+        private List<String> bag;
+        private boolean isHuman;
 
+        public Hero(String name, int armorStrength, String weapon, List<String> bag, boolean isHuman) {
+            this.name = name;
+            this.armorStrength = armorStrength;
+            this.weapon = weapon;
+            this.bag = bag;
+            this.isHuman = isHuman;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getArmorStrength() {
+            return armorStrength;
+        }
+
+        public void setArmorStrength(int armorStrength) {
+            this.armorStrength = armorStrength;
+        }
+
+        public String getWeapon() {
+            return weapon;
+        }
+
+        public void setWeapon(String weapon) {
+            this.weapon = weapon;
+        }
+
+        public List<String> getBag() {
+            return bag;
+        }
+
+        public void setBag(List<String> bag) {
+            this.bag = bag;
+        }
+
+        public boolean isHuman() {
+            return isHuman;
+        }
+
+        public void setHuman(boolean human) {
+            isHuman = human;
+        }
+    }
 }
+

@@ -1,6 +1,6 @@
 package seminars.first.hw;
 
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 
 public class Shop {
@@ -15,20 +15,14 @@ public class Shop {
         this.products = products;
     }
 
-    /**
-     * @return отсортированный по возрастанию и цене список продуктов
-     */
+    // Метод должен вернуть отсортированный по возрастанию по цене список продуктов
     public List<Product> getSortedListProducts() {
-        products.sort(Comparator.comparing(Product::getCost));
+        Collections.sort(products);
         return products;
     }
 
-    /**
-     * @return самый дорогой продукт
-     */
+    // Метод должен вернуть самый дорогой продукт
     public Product getMostExpensiveProduct() {
-        return products.stream()
-                .max(Comparator.comparing(Product::getCost))
-                .orElse(null);
+        return getSortedListProducts().get(products.size()-1);
     }
 }
