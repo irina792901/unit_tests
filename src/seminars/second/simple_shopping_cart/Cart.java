@@ -1,6 +1,5 @@
 package seminars.second.simple_shopping_cart;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +33,7 @@ public class Cart {
     }
 
     // Чтобы положить продукт в корзину, его нужно сначала найти в магазине
-    private Product getProductByProductID(int id) {
+    public Product getProductByProductID(int id) {
         Product product = new Product();
 
         List<Product> products = shop.getProductsShop();
@@ -119,11 +118,11 @@ public class Cart {
         }
 
 
-       try {
-           Thread.sleep(70);
-       } catch (InterruptedException e) {
-           throw new RuntimeException(e);
-       }
+        try {
+            Thread.sleep(70);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
         recalculate();

@@ -2,6 +2,7 @@ package seminars.second.simple_shopping_cart;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Shop shop = new Shop(getStoreItems());
