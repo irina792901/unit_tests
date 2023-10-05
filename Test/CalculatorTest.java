@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -9,10 +8,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 
 
 public class CalculatorTest {
@@ -120,7 +119,7 @@ public class CalculatorTest {
 
     // <-------JUnit-Jupiter-Params
     @ParameterizedTest
-    @ValueSource(chars = { '&', '#', '=' })
+    @ValueSource(chars = {'&', '#', '='})
     void expectedIllegalStateExpressionToo(char i) {
         // Arrange
         Calculator calculator = new Calculator();
@@ -164,5 +163,11 @@ public class CalculatorTest {
                 .describedAs("Input error");
         System.setIn(inputStream);
         System.setOut(null);
+    }
+
+    @Test
+    void computeSquareCircleTest() {
+        Calculator2 calculator2 = new Calculator2();
+        assertEquals(calculator2.computeSquareCircle(10), 314.1592653589793);
     }
 }

@@ -8,10 +8,24 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/second/hw" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/book" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/card" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/database" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/hotel" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/message" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/weather" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/second" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/second/simple_shopping_cart" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds/coverage" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds/hw" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds/tdd" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="assertj-core-3.23.1" level="project" />
+    <orderEntry type="library" exported="" name="assertj-core-3.23.1" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -39,5 +53,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="byte-buddy-1.12.22" level="project" />
   </component>
 </module>
