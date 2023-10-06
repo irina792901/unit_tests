@@ -1,5 +1,7 @@
 package seminars.third.coverage;
 
+import java.util.Arrays;
+
 public class SomeService {
 
     /**
@@ -68,25 +70,18 @@ public class SomeService {
         }
     }
 
-    // HW 3.1. Нужно покрыть тестами метод на 100%
-    // Метод проверяет, является ли целое число записанное в переменную n, чётным (true) либо нечётным (false).
-    public boolean evenOddNumber(int n) {
-        if (n % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    // HW 3.2. Нужно написать метод который проверяет, попадает ли переданное число в интервал (25;100) и возвращает true, если попадает и false - если нет,
-    // покрыть тестами метод на 100%
-    public boolean numberInInterval(int n) {
-        if (n > 25 && n < 100) {
-            return true;
-        } else {
-            return false;
-        }
+    public int luckySum2(int a, int b, int c) {
+        if (a == 13) a = 0;
+        if (b == 13) b = 0;
+        if (c == 13) c = 0;
+        return a + b + c;
     }
 
 
+    public int luckySum3(int a, int b, int c) {
+        int sum = Arrays.stream(new int[]{a, b, c})
+                .filter(value -> value != 13)
+                .sum();
+        return sum;
+    }
 }

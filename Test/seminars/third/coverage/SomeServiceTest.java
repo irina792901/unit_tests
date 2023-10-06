@@ -158,6 +158,20 @@ class SomeServiceTest {
         assertThat(someService.luckySum(9, 9, 9)).isEqualTo(27);
     }
 
-    // вариант вернуть а + в + с если одно из чисел равно 13
+    @Test
+    void luckySumReturnSumWithout13Var() {
+        assertThat(someService.luckySum2(2, 3, 13)).isEqualTo(5);
+        assertThat(someService.luckySum2(2, 13, 9)).isEqualTo(11);
+        assertThat(someService.luckySum2(13, 9, 9)).isEqualTo(18);
+        assertThat(someService.luckySum2(9, 9, 9)).isEqualTo(27);
+    }
+
+    @Test
+    void luckySumReturnSumWithout13Var2() {
+        assertThat(someService.luckySum3(2, 3, 13)).isEqualTo(5);
+        assertThat(someService.luckySum3(2, 13, 9)).isEqualTo(11);
+        assertThat(someService.luckySum3(13, 9, 9)).isEqualTo(18);
+        assertThat(someService.luckySum3(9, 9, 9)).isEqualTo(27);
+    }
 
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/out/production/unit-tests" />
+    <output-test url="file://$MODULE_DIR$/out/test/unit-tests" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="true" />
@@ -18,10 +20,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/fourth/weather" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/second" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/second/simple_shopping_cart" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds/coverage" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds/hw" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/thirds/tdd" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/coverage" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/hw" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/tdd" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

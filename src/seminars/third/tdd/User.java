@@ -1,11 +1,10 @@
 package seminars.third.tdd;
 
 public class User {
-
-    String name;
-    String password;
-    boolean isAdmin;
-    boolean isAuthenticate = false;
+    private String name;
+    private String password;
+    private boolean isAdmin;
+    private boolean isAuthenticate = true;
 
     public User(String name, String password, boolean isAdmin) {
         this.name = name;
@@ -13,17 +12,40 @@ public class User {
         this.isAdmin = isAdmin;
     }
 
-    public boolean authenticate(String name, String password) {
-        if (name.equals(this.name) && password.equals(this.password)) {
+    public boolean authenticate(String inputName, String inputPassword) {
+        if (inputName.equals(this.name) && inputPassword.equals(this.password)) {
             isAuthenticate = true;
-            return true;
         } else {
             isAuthenticate = false;
-            return false;
         }
+        return isAuthenticate;
     }
 
-    public void logOut() {
-        this.isAuthenticate = false;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public boolean isAuthenticate() {
+        return isAuthenticate;
+    }
+
+    public void setAuthenticate(boolean authenticate) {
+        this.isAuthenticate = authenticate;
     }
 }

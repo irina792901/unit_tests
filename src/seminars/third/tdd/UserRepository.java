@@ -4,26 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepository {
-    List<User> data = new ArrayList<>();
+    private List<User> db = new ArrayList<>();
 
     public void addUser(User user) {
-        if (user.isAuthenticate) {
-            data.add(user);
+        if (user != null && !findByName(user.getName())) {
+            db.add(user);
         }
     }
 
     public boolean findByName(String username) {
-        for (User user : data) {
-            if (user.name.equals(username)) {
-                return true;
+        if (username != null && !db.isEmpty()) {
+            for (User user : db) {
+                if (user.getName().equals(username)) {
+                    return true;
+                }
             }
         }
         return false;
     }
 
     public void logoutAll() {
-        for (int i = 0; i < data.size(); i++) {
-            data.get(i).isAuthenticate = false;
+        for (User user : db) {
+            if (!user.isAdmin())
+                user.setAuthenticate(false);
         }
     }
 }
