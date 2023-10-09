@@ -25,7 +25,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/hw" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/tdd" isTestSource="true" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="20" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="assertj-core-3.23.1" level="project" />
     <orderEntry type="module-library" exported="">
@@ -56,5 +56,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="byte-buddy-1.12.22" level="project" />
+    <orderEntry type="library" exported="" name="selenium-java-4.11" level="project" />
   </component>
 </module>

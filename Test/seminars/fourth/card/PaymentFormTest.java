@@ -1,5 +1,10 @@
 package seminars.fourth.card;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
+
 class PaymentFormTest {
 
     /**
@@ -13,6 +18,27 @@ class PaymentFormTest {
      * Вызовите метод `pay()` и убедитесь, что мок-объект вызывает метод `charge()`
      */
 
+    @Test
+    public void testPaymentForm() {
+        // Создание мок-объекта для класса CreditCard
+        CreditCard mockCreditCard = mock(CreditCard.class);
 
+        // Определение поведения мок-объекта
+        when(mockCreditCard.getCardNumber()).thenReturn("1234567812345678");
+        when(mockCreditCard.getCardHolder()).thenReturn("Holder");
+        when(mockCreditCard.getExpiryDate()).thenReturn("01/23");
+        when(mockCreditCard.getCvv()).thenReturn("123");
 
+        // Создание объекта класса PaymentForm, передача ему мок-объекта в качестве аргумента
+        PaymentForm paymentForm = new PaymentForm(mockCreditCard);
+
+        // Вызов метода pay() и проверка, что мок-объект вызывает метод charge()
+        double amount = 100.0;
+        paymentForm.pay(amount);
+
+        // Проверка, что метод charge() был вызван
+        verify(mockCreditCard, times(1)).charge(100);
+        verify(mockCreditCard).charge(amount);
+        assertEquals("Holder",mockCreditCard.getCardHolder());
+    }
 }
