@@ -24,6 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/coverage" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/hw" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Test/seminars/third/tdd" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test/seminars/five" isTestSource="true" />
     </content>
     <orderEntry type="jdk" jdkName="20" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -57,5 +58,24 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="byte-buddy-1.12.22" level="project" />
     <orderEntry type="library" exported="" name="selenium-java-4.11" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/selenium-java-4.11.0/selenium-api-4.11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/selenium-java-4.11.0/selenium-chrome-driver-4.11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="selenium-edge-driver-4.11.0" level="project" />
   </component>
 </module>
